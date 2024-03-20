@@ -19,7 +19,7 @@ create table meter_readings (
 
 ## Plan
 
-- [ ] Set up basic repo (Poetry, black, mypy, pytest, etc...)
+- [x] Set up basic repo (Poetry, black, mypy, pytest, etc...)
 - [ ] Set up placeholder classes and write main test case
 - [ ] Write MeterReading class that can be used to generate SQL insert statements
 - [ ] Write Nem12Parser class that can parse NEM12 files and yield meter readings
