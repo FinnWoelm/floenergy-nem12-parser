@@ -7,6 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pypika = "^0.48.9"
 
 
 [tool.poetry.group.dev.dependencies]

@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from datetime import datetime
 from decimal import Decimal
+from pypika import Query
 
 
 @dataclass(kw_only=True, frozen=True)
@@ -29,4 +30,10 @@ class MeterReading:
         Returns:
             SQL insert statement
         """
-        pass
+        query = (
+            Query.into("meter_readings")
+            .columns("nmi", "timestamp", "consumption")
+            .insert(self.nmi, self.timestamp, self.consumption)
+        )
+
+        return str(query) + ";"

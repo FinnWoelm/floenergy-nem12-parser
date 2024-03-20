@@ -229,6 +229,16 @@ files = [
 ]
 
 [[package]]
+name = "pypika"
+version = "0.48.9"
+description = "A SQL query builder API for Python"
+optional = false
+python-versions = "*"
+files = [
+    {file = "PyPika-0.48.9.tar.gz", hash = "sha256:838836a61747e7c8380cd1b7ff638694b7a7335345d0f559b04b2cd832ad5378"},
+]
+
+[[package]]
 name = "pytest"
 version = "8.1.1"
 description = "pytest: simple powerful testing with Python"
@@ -319,4 +329,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "aa2f312f069cacae11b7f9bc8b52c7949a838811985a93615a553ac7eabd7746"
+content-hash = "68a163426e1b05484858669d897fb27bc2231f1ef32f933ebd9104728fbcc02b"
