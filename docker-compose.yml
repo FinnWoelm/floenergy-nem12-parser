@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  parser:
+    build:
+      context: .
+    volumes:
+      - ./:/app
+      # Prevent .git folder from being mounted into container
+      - /app/.git
+
+  test:
+    command: ["nodemon", "--exec", "pytest", "--ext", "*"]
+    build:
+      context: .
+    volumes:
+      - ./:/app
+      # Prevent .git folder from being mounted into container
+      - /app/.git
+    profiles:
+      - testing

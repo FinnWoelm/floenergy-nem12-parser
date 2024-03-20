@@ -24,6 +24,7 @@ create table meter_readings (
 - [Setup](#setup)
 - [How to use](#how-to-use)
 - [Testing](#testing)
+- [With Docker](#with-docker)
 - [Notes](#notes)
 - [Reference document](#reference-document)
 
@@ -38,7 +39,7 @@ create table meter_readings (
 ### Stretch goals
 
 - [x] README: Add instructions for installation, running, testing, etc...
-- [ ] Set up Docker container to allow users without Python to run code & tests
+- [x] Set up Docker container to allow users without Python to run code & tests
 - [ ] Improve error handling (e.g. passing NEM13 file, validate NMI length, 900 block not found, etc...)
 
 ## Setup
@@ -82,6 +83,26 @@ with open("sample.csv") as f:
 ## Testing
 
 A few unit and integration tests were written with Pytest. To run the tests, simply run the `pytest` command.
+
+## With Docker
+
+To run the code in Docker, run:
+
+```bash
+docker compose build
+docker compose up -d
+docker compose exec parser python parse.py sample.csv
+```
+
+To run the tests in Docker, run:
+
+```bash
+docker compose build test
+docker compose up -d test
+docker compose logs -f test
+```
+
+Tests automatically re-run whenever the code changes.
 
 ## Notes
 
