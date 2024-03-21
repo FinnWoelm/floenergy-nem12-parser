@@ -1,4 +1,4 @@
-# Floenergy NEM12 Parser<!-- omit from toc -->
+# Flo Energy NEM12 Parser<!-- omit from toc -->
 
 This repo contains code for parsing meter readings from input files in [NEM12 format](https://aemo.com.au/-/media/files/electricity/nem/retail_and_metering/market_settlement_and_transfer_solutions/2022/mdff-specification-nem12-nem13-v25.pdf?la=en) and generating corresponding SQL insert statements.
 
